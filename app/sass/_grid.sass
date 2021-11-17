@@ -1,0 +1,124 @@
+*, *:before, *:after
+ box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+ margin: 0
+ padding: 0
+ border: 0
+ font-size: 100%
+ font: inherit
+ vertical-align: baseline
+ text-rendering: optimizeLegibility
+ -webkit-font-smoothing: antialiased
+footer, header, nav, section, main
+ display: block
+a
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+ &:link, &:visited, &:hover, &:focus, &:active
+  outline: 0
+  text-decoration: none
+button:link, button:visited, button:hover, button:focus, button:active
+ outline: 0
+ box-shadow: none
+input:link, input:visited, input:hover, input:focus, input:active
+ outline: 0
+ box-shadow: none
+textarea:link, textarea:visited, textarea:hover, textarea:focus, textarea:active
+ outline: 0
+ box-shadow: none
+input:not([type="submit"]), textarea
+ border: none
+ background: transparent
+ width: 100%
+ padding: 0
+textarea
+ resize: none
+body
+ line-height: 1
+ scroll-behavior: smooth
+ line-height: 1.5
+ol, ul
+ list-style: none
+ padding: 0
+blockquote, q
+ quotes: none
+blockquote:before, blockquote:after, q:before, q:after
+ content: ''
+ content: none
+table
+ border-collapse: collapse
+ border-spacing: 0
+input
+ -webkit-appearance: none
+ border-radius: 0
+ background: transparent
+ border: none
+ padding: 0 
+ text-decoration: none
+img
+ width: 100%
+ &.img-cover
+  height: 100%
+  object-fit: cover
+.flex-center
+ display: flex
+ justify-content: center
+.container
+ width: 100%
+ padding-right: 15px
+ padding-left: 15px
+ margin-right: auto
+ margin-left: auto
+.row
+ display: flex
+ flex-wrap: wrap
+ margin-right: -15px
+ margin-left: -15px
+@for $i from 1 through 12
+ .col-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}
+  position: relative
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+@for $i from 1 through 12
+ .col-#{$i}
+  flex: 0 0 8.333333%*$i
+  max-width: 8.333333%*$i
+ .offset-#{$i}
+  margin-left: 8.333333%*$i
+@media only screen and (min-width: 576px)
+ .container
+  max-width: 540px
+ @for $i from 1 through 12
+  .col-sm-#{$i}
+   flex: 0 0 8.333333%*$i
+   max-width: 8.333333%*$i
+  .offset-sm-#{$i}
+   margin-left: 8.333333%*$i
+@media only screen and (min-width: 768px)
+ .container
+  max-width: 720px
+ @for $i from 1 through 12
+  .col-md-#{$i}
+   flex: 0 0 8.333333%*$i
+   max-width: 8.333333%*$i
+  .offset-md-#{$i}
+   margin-left: 8.333333%*$i
+@media only screen and (min-width: 992px)
+ .container
+  max-width: 960px
+ @for $i from 1 through 12
+  .col-lg-#{$i}
+   flex: 0 0 8.333333%*$i
+   max-width: 8.333333%*$i
+  .offset-lg-#{$i}
+   margin-left: 8.333333%*$i
+@media only screen and (min-width: 1360px)
+ .container
+  max-width: 1140px
+ @for $i from 1 through 12
+  .col-xl-#{$i}
+   flex: 0 0 8.333333%*$i
+   max-width: 8.333333%*$i
+  .offset-xl-#{$i}
+   margin-left: 8.333333%*$i

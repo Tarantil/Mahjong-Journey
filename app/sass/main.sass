@@ -1,0 +1,532 @@
+@import "grid"
+$default-ui-system-fonts: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif
+%font-regular
+	font-family: Fira Sans, $default-ui-system-fonts
+	font-style: normal
+	font-weight: normal
+%font-medium
+	font-family: Fira Sans, $default-ui-system-fonts
+	font-style: normal
+	font-weight: 500
+%font-bold
+	font-family: Fira Sans, $default-ui-system-fonts
+	font-style: normal
+	font-weight: bold
+body
+	@extend %font-medium
+	color: #393939
+	background: #FFEDD6
+	min-height: 100vh
+*
+	@extend %font-medium
+p
+	@extend %font-medium
+	color: #393939
+@keyframes bounce
+	0%
+		transform: translateY(-100vh)
+	20%, 50%, 80%, 100%
+		transform: translateY(0px)
+	40%
+		transform: translateY(-30px)
+	60%
+		transform: translateY(-15px)
+.btn
+	@extend %font-bold
+	font-size: 44px
+	line-height: 48px
+	color: #FFFFFF
+	padding: 0
+	border: none
+	border-radius: 30px
+	background: transparent url('../img/btn-back.png') center center no-repeat
+	background-size: 100%
+	height: 100px
+	width: 413px
+	display: flex
+	justify-content: center
+	align-items: center
+	text-shadow: 0px 2px 3px #000000
+	box-shadow: 0px 4px 20px rgba(35, 22, 16, 0.64)
+	cursor: pointer
+	transition: box-shadow .2s linear
+	&:hover
+		box-shadow: none
+main
+	overflow-x: hidden
+section
+	position: relative
+.banner
+	background: url('../img/banner-background.png') center top no-repeat
+	background-size: cover
+.banner__container
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding-top: 62px
+	padding-bottom: 116px
+	position: relative
+	z-index: 1
+.banner__character
+	position: absolute
+	bottom: 0
+	left: 87px
+	width: 442px
+.banner__tiles
+	position: absolute
+	bottom: 146px
+	right: 49px
+	width: 394px
+.banner__logo
+	width: 409px
+	margin-bottom: 100px
+	transform: translateY(-100vh)
+.banner__logo_active
+	animation: bounce 2s ease forwards
+.banner__btn
+	margin-bottom: 116px
+.banner__description
+	font-size: 40px
+	line-height: 44px
+	text-align: center
+	color: #FFFFFF
+	text-shadow: 0px 2px 2px #000000
+.video-block
+	border-radius: 40px 40px 0px 0px
+	margin-top: -56px
+	background: #FFEDD6 url('../img/video-block-back.png') center center no-repeat
+	background-size: cover
+	padding: 52px 0 133px
+.video-block__description
+	font-size: 28px
+	line-height: 44px
+	text-align: center
+.video-block__container
+	margin: 64px 133px 0
+	padding: 36px 61px 67px
+	position: relative
+	background: url('../img/video-back.png') center top no-repeat
+	background-size: 100% 100%
+.video-block__video
+	width: 100%
+	height: 414px
+	object-fit: cover
+.video-block__anim-el_left
+	position: absolute
+	left: -124px
+	width: 193px
+	top: 18px
+.video-block__anim-el_right
+	position: absolute
+	right: -143px
+	width: 185px
+	bottom: -18px
+.gif-block
+	margin-top: -80px
+	border-radius: 40px 40px 0px 0px
+	background: url('../img/gif-back.png') center center no-repeat
+	background-size: cover
+	padding: 80px 0 287px
+.gif-block__container
+	position: relative
+	z-index: 1
+.gif-block__anim-el_left
+	position: absolute
+	top: 53px
+	left: 13px
+	width: auto
+	z-index: 1
+.gif-block__anim-el_right
+	position: absolute
+	top: 60px
+	right: 16px
+	width: auto
+.gif-block__anim-el_left_1
+	position: absolute
+	bottom: 87px
+	left: 42px
+	width: auto
+	z-index: 1
+.gif-block__gif-wrap
+	height: 380px
+	border: 3px solid #FFFFFF
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.639)
+	border-radius: 40px
+	overflow: hidden
+.gif-block__desc-wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 0 42px
+.gif-block__icon
+	width: 120px
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.64)
+	border-radius: 12px
+	margin-bottom: 17px
+.gif-block__game-name
+	@extend %font-bold
+	font-size: 30px
+	line-height: 44px
+	text-align: center
+	margin-bottom: 8px
+.gif-block__game-description
+	font-size: 24px
+	line-height: 36px
+	text-align: center
+	mix-blend-mode: normal
+	text-shadow: 0px 4px 20px #FFFFFF, 0px 0px 10px #FFFFFF
+.gif-block__btn
+	margin-top: 23px
+	height: 87px
+	width: 360px
+	font-size: 36px
+.reviews
+	margin-top: -169px
+	background: #FFEDD6
+	border-radius: 40px 40px 0px 0px
+	padding: 80px 0 124px
+.reviews__avatar
+	width: 160px
+	height: 160px
+	object-fit: cover
+	border-radius: 100%
+	float: left
+.reviews__head
+	margin-left: 190px
+.reviews__rate
+	display: flex
+	margin-bottom: 22px
+.reviews__star
+	width: 36px
+.reviews__name
+	font-size: 22px
+	line-height: 28px
+	margin-bottom: 16px
+.reviews__text
+	@extend %font-regular
+	font-size: 18px
+	line-height: 28px
+	padding: 18px 155px 18px 40px 
+	background: #FFFFFF
+	border-radius: 25px 25px 25px 0
+	margin-left: 190px
+.swiper-button-next, .swiper-button-prev
+	&::after
+		display: none
+.swiper-slide
+	padding: 0 95px
+.features
+	border-radius: 40px 40px 0px 0px
+	margin-top: -44px
+	background: #FFEDD6 url('../img/video-block-back.png') center center no-repeat
+	background-size: cover
+	padding: 80px 0 142px
+.features__wrap
+	margin-top: 40px
+.features__title
+	@extend %font-bold
+	font-size: 30px
+	line-height: 44px
+	text-align: center
+	letter-spacing: 0.04em
+	text-transform: uppercase
+.features__feature
+	display: flex
+	align-items: center
+	margin-bottom: 34px
+.features__image
+	width: 59px
+	margin-right: 33px
+.features__name
+	font-size: 18px
+	line-height: 28px
+.footer
+	border-radius: 40px 40px 0px 0px
+	margin-top: -30px
+	background: url('../img/footer-back.png') center top no-repeat
+	background-size: cover
+	padding: 80px 0 38px
+	position: relative
+.footer__title
+	@extend %font-bold
+	font-size: 55px
+	line-height: 66px
+	color: #FFFFFF
+	margin-bottom: 24px
+.footer__text
+	font-size: 18px
+	line-height: 28px
+	color: #FFFFFF
+.footer__links
+	margin-top: 24px
+	display: flex
+	justify-content: space-between
+	align-items: center
+.footer__link
+	svg path
+		transition: fill .2s linear
+	&:hover svg path
+		fill: rgba(0,0,0,0.4)
+.footer__wrap
+	margin-top: 108px
+	display: flex
+	flex-direction: column
+	align-items: center
+.footer__copyright
+	@extend %font-regular
+	font-size: 16px
+	line-height: 19px
+	color: #FFFFFF
+	text-align: center
+.footer__nav
+	margin-top: 14px
+	ul
+		display: flex
+		li
+			margin-right: 25px
+			&:last-child
+				margin-right: 0
+			a
+				@extend %font-regular
+				font-size: 16px
+				line-height: 19px
+				color: #FFFFFF
+				transition: color .2s linear
+				&:hover
+					color: rgba(0,0,0,0.4)
+.anim-el_left
+	transform: translateX(-100vw)
+	transition: transform 2s ease-in-out
+.anim-el_right
+	transform: translateX(100vw)
+	transition: transform 2s ease-in-out
+.anim-el_active
+	transform: translateX(0)
+@media only screen and (max-width: 1370px)
+	.banner__character
+		left: 0
+	.banner__tiles
+		right: 6px
+@media only screen and (max-width: 1100px)
+	.banner__container
+		padding-top: 40px
+		padding-bottom: 96px
+	.banner__logo
+		width: 268px
+	.banner__character
+		width: 330px
+		bottom: 10px
+	.banner__tiles
+		width: 303px
+	.btn
+		width: 302px
+		height: 73px
+		font-size: 36px
+	.banner__btn
+		margin-bottom: 36px
+	.banner__description
+		font-size: 28px
+	.video-block
+		padding: 35px 0 120px
+	.video-block__description
+		font-size: 20px
+	.video-block__container
+		margin: 33px 90px 0
+		padding: 21px 35px 39px
+	.video-block__video
+		height: 390px
+	.video-block__anim-el_left
+		top: 12px
+		left: -73px
+		width: 102px
+	.video-block__anim-el_right
+		right: -59px
+		width: 114px
+	.gif-block, .reviews, .features, .footer
+		margin-top: -40px
+	.gif-block
+		padding: 40px 0 81px
+	.gif-block__anim-el_left_1
+		width: 100px
+		left: 28px
+		bottom: -20px
+	.gif-block__game-name
+		font-size: 24px
+		line-height: 36px
+	.gif-block__game-description
+		font-size: 20px
+		line-height: 32px
+	.gif-block__btn
+		font-size: 32px
+	.gif-block__anim-el_left
+		width: 201px
+		top: 16px
+		left: 5px
+	.gif-block__anim-el_right
+		width: 263px
+		top: calc(50% - 125px/2)
+		right: -87px
+	.reviews
+		padding: 60px 0 104px
+	.reviews__review
+		display: flex
+		flex-wrap: wrap
+	.reviews__avatar
+		width: 100px
+		height: 100px
+		float: unset
+	.reviews__head
+		margin-left: 18px
+	.reviews__name
+		font-size: 20px
+	.reviews__text
+		margin-left: 0
+		margin-top: 20px
+		border-radius: 0 25px 25px 25px
+	.features
+		padding: 56px 0 80px
+	.features__title
+		font-size: 24px
+	.footer
+		margin-top: -40px
+	.footer__title
+		font-size: 40px
+		line-height: 48px
+		margin-bottom: 16px
+	.footer__links
+		margin-top: 20px
+	.footer__wrap
+		margin-top: 138px
+@media only screen and (max-width: 991px)
+	.video-block__video
+		height: 248px
+	.gif-block__gif-wrap
+		margin: 0 90px 40px
+		height: 287px
+	.features__character
+		width: 244px
+		margin: 0 auto
+		display: block
+@media only screen and (max-width: 767px)
+	.video-block__container
+		margin: 33px 0 0
+	.gif-block__gif-wrap
+		margin: 0 0 40px
+	.swiper-slide
+		padding: 0 55px
+	.reviews__text
+		padding: 16px
+@media only screen and (max-width: 650px)
+	.banner__character
+		width: 255px
+		bottom: 26px
+		left: -51px
+	.banner__tiles
+		width: 233px
+		right: -23px
+	.video-block__anim-el_left
+		width: 50px
+		top: 5px
+		left: -30px
+	.video-block__anim-el_right
+		width: 55px
+		right: -22px
+		bottom: -12px
+	.gif-block__anim-el_left
+		width: 122px
+	.gif-block__anim-el_right
+		width: 151px
+		top: 8px
+		right: -64px
+	.gif-block__anim-el_left_1
+		width: 73px
+		bottom: 8px
+		left: 11px
+@media only screen and (max-width: 560px)
+	.video-block__container
+		margin: 33px 25px 0
+	.gif-block
+		padding-top: 80px
+@media only screen and (max-width: 500px)
+	.banner__logo
+		width: 170px
+		margin-bottom: 192px
+	.banner__container
+		padding-top: 20px
+		padding-bottom: 76px
+	.btn
+		width: 265px
+		height: 64px
+		font-size: 32px
+	.banner__btn
+		margin-bottom: 16px
+	.banner__description
+		font-size: 24px
+	.video-block
+		padding: 24px 0 120px
+	.video-block__description
+		font-size: 18px
+		line-height: 28px
+	.video-block__container
+		margin-top: 16px
+		padding: 11px 17px 19px
+	.video-block__video
+		height: 200px
+	.gif-block
+		padding: 80px 0 125px
+	.gif-block__gif-wrap
+		margin-bottom: 20px
+	.gif-block__btn
+		height: 70px
+		width: 290px
+	.reviews__review
+		flex-direction: column
+		align-items: center
+	.reviews__avatar
+		margin-bottom: 8px
+	.reviews__head
+		margin-left: 0
+	.reviews__rate
+		margin-bottom: 12px
+	.reviews__name
+		text-align: center
+	.reviews__text
+		margin-left: 50px
+		margin-top: 0
+	.swiper-button-next, .swiper-button-prev
+		margin-top: 0
+		top: 30px
+	.swiper-slide
+		padding: 0
+	.features
+		padding: 40px 0 80px
+	.features__title
+		font-size: 20px
+	.features__wrap
+		margin-top: 16px
+	.features__image
+		width: 45px
+		margin-right: 15px
+	.features__name
+		font-size: 16px
+		line-height: 24px
+	.features__feature
+		margin-bottom: 16px
+	.features__character
+		width: 166px
+	.footer
+		padding: 40px 0 25px
+		background-position: 75% 0%
+	.footer__title, .footer__text
+		text-align: center
+@media only screen and (max-width: 400px)
+	.video-block__video
+		height: 121px
+	.gif-block__gif-wrap
+		height: 174px
+@media only screen and (max-width: 319px)
+	.btn
+		width: 100%
+	.gif-block__desc-wrap
+		padding: 0
